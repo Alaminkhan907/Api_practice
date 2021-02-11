@@ -12,15 +12,14 @@ const displayCountries = countries =>{
         const country = countries[i];
         //console.log(country.name);
         const countryDiv = document.createElement('div');
-        const h3 = document.createElement('h3');
-        h3.innerText= country.name;
-        const p = document.createElement('p');
-        p.innerText= country.capital;
-        console.log(country.capital);
-        countryDiv.appendChild(h3);
-        countryDiv.appendChild(p);
+        countryDiv.className ='country';
+        const countryInfor =`
+        <h3 class ="country-name">${country.name}</h3>
+        <p>${country.capital}</p>
+        `
+        countryDiv.innerHTML=countryInfor;
         countriesDiv.appendChild(countryDiv);
-        console.log(country.capital);
+        
      
     }
 }
